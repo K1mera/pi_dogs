@@ -1,0 +1,41 @@
+.landingLayout {
+    height: calc( 100vh - 16px);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.landingItems {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.landingItems h1 {
+    font-size: 3.5rem;
+    color: #7D3467;
+    text-align: center;
+    vertical-align: middle ;
+}
+
+
+.toHome {
+    text-decoration: none;
+    font-family: 'Lilita One', sans-serif;
+    font-size: 1.7rem;
+    color: white;
+    padding: 15px 50px;
+    background-color: #9CFFCE;
+    box-shadow: 0px 4px 4px 0px rgba(125, 52, 103, 0.7);
+    border-radius: 50px;
+    outline: none;
+    border: 2px solid white;
+}
+
+.dogLandingImg {
+    margin-bottom: 0;
+}

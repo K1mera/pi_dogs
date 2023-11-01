@@ -1,0 +1,46 @@
+.navBar {
+    height: 95px;
+    width: 100wh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navBrand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navBrand h2 {
+    color: #7D3467;
+    font-size: 32px;
+}
+
+.navItems {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 24px;
+}
+
+.navLink {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+
+.formButton {
+    color: white;
+    background: none;
+    border: none;
+    font-family: Lilita One;
+    font-size: 24px;
+    cursor: pointer;
+}
+
