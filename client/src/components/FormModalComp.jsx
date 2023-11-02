@@ -3,12 +3,30 @@ import { useForm } from "../hooks";
 
 import styles from "./styles/FormModalComp.module.css";
 import {addNewDog} from "../store";
+import {useState} from "react";
+
+
+
+const formValidations = {
+  name: [
+    (value) => value.length >= 3 && value.length <= 17,
+    "Name should be between 3 and 17 characters.",
+  ],
+  height: [(value) => value !== 0, "Height shouldn't be 0."],
+  weight: [(value) => value !== 0, "Weight shouldn't be 0."],
+  average_lifespan: [
+    (value) => value.length >= 1,
+    "Lifespan should be more than 0.",
+  ],
+};
 
 
 export const FormModalComp = () => {
   const dispatch = useDispatch();
   const { temps } = useSelector(state => state.temps );
   
+  const [formSubmitted, setformSubmitted] = useState(false);
+
   const {
     name,
     height,
@@ -17,13 +35,23 @@ export const FormModalComp = () => {
     temperaments,
     formState,
     onInputChange,
-  } = useForm({
-    name: "",
-    height: "0",
-    weight: "0",
-    average_lifespan: 0,
-    temperaments: [],
-  });
+    nameValid,
+    heightValid,
+    weightValid,
+    average_lifespanValid,
+    isFormValid,
+  } = useForm(
+    {
+      name: "",
+      height: 0,
+      weight: 0,
+      average_lifespan: 0,
+      temperaments: [],
+    },
+    formValidations
+  );
+
+ 
 
   const handleHeightChange = (event) => {
     const newValue = parseInt(event.target.value, 10);
@@ -41,11 +69,10 @@ export const FormModalComp = () => {
       (option) => option.value
     );
 
-    // Maximum number of selections allowed
     const maxSelections = 3;
 
     if (selectedTemperamentNames.length > maxSelections) {
-      // If the selected options exceed the limit, prevent the change
+     
       event.preventDefault();
     } else {
       onInputChange({
@@ -57,16 +84,24 @@ export const FormModalComp = () => {
 
   const onSubmit = (event) => {
     event.preventDefault()
+    setformSubmitted(true);
+
+    if (!isFormValid) return;
     dispatch(addNewDog(formState))
   }
 
   return (
-    <form className={styles.formContainer} onSubmit={ onSubmit }>
+    <form className={styles.formContainer} onSubmit={onSubmit}>
       <h2 className={styles.formTitle}>Add new dog breed.</h2>
       <section className={styles.formSection}>
         <div className={styles.formInputs}>
           <label className={styles.inputLabels} htmlFor="name">
             Breed
+            {nameValid && formSubmitted ? (
+              <span className={styles.errorMessage}>{nameValid}</span>
+            ) : (
+              ""
+            )}
           </label>
           <input
             className={styles.inputArea}
@@ -80,6 +115,11 @@ export const FormModalComp = () => {
         <div className={styles.formInputs}>
           <label className={styles.inputLabels} htmlFor="height">
             Height
+            {heightValid && formSubmitted ? (
+              <span className={styles.errorMessage}>{heightValid}</span>
+            ) : (
+              ""
+            )}
           </label>
           <input
             className={styles.rangeInputs}
@@ -96,6 +136,11 @@ export const FormModalComp = () => {
         <div className={styles.formInputs}>
           <label className={styles.inputLabels} htmlFor="weight">
             Weight
+            {weightValid && formSubmitted ? (
+              <span className={styles.errorMessage}>{weightValid}</span>
+            ) : (
+              ""
+            )}
           </label>
           <input
             className={styles.rangeInputs}
@@ -112,6 +157,13 @@ export const FormModalComp = () => {
         <div className={styles.formInputs}>
           <label className={styles.inputLabels} htmlFor="average_lifespan">
             Lifespan
+            {average_lifespanValid && formSubmitted ? (
+              <span className={styles.errorMessage}>
+                {average_lifespanValid}
+              </span>
+            ) : (
+              ""
+            )}
           </label>
           <input
             className={styles.inputNumber}
@@ -124,9 +176,13 @@ export const FormModalComp = () => {
         <div className={styles.formInputs}>
           <label className={styles.inputLabels} htmlFor="temperaments">
             Temperaments <br />
-            <span className={ styles.instructions }>(Hold ctrl key to select various temperaments. Select up to 3)</span>
+            <span className={styles.instructions}>
+              (Hold ctrl key to select various temperaments. Select up to 3)
+            </span>
           </label>
-          <span className={ styles.rangeIndicator }>{temperaments.join(', ')}</span>
+          <span className={styles.rangeIndicator}>
+            {temperaments.join(", ")}
+          </span>
           <select
             id="temperaments"
             className={styles.dropTemps}
@@ -143,7 +199,9 @@ export const FormModalComp = () => {
           </select>
         </div>
       </section>
-      <button type='submit' className={styles.submitButton}>Create</button>
+      <button type="submit" className={styles.submitButton}>
+        Create
+      </button>
     </form>
   );
 };

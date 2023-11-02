@@ -54,6 +54,14 @@
   color: white;
   margin-bottom: 30px;
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.searchButton:hover {
+    background-color: white;
+    color: #9CFFCE;
+    transform: scale(1.15);
+    
 }
 
 .filterSection {
@@ -125,7 +133,7 @@
 .orderButtonsArea {
   display: flex;
   flex-direction: row;
-  gap: 5px;
+  gap: 7px;
 }
 .orderButtons {
   display: flex;
@@ -142,4 +150,12 @@
   font-size: 1.2rem;
   color: white;
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.orderButtons:hover {
+    background-color: white;
+    color: #9CFFCE;
+    transform: scale(1.15);
+    
 }

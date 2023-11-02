@@ -15,7 +15,7 @@ export const DetailComp = () => {
     dispatch(getDogById(id));
   }, [id]);
 
-  console.log(dog);
+  
 
   return (
     <main className={styles.background}>

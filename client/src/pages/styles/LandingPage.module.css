@@ -34,6 +34,15 @@
     border-radius: 50px;
     outline: none;
     border: 2px solid white;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    
+}
+
+.toHome:hover {
+    background-color: white;
+    color: #9CFFCE;
+    transform: scale(1.15);
+    
 }
 
 .dogLandingImg {

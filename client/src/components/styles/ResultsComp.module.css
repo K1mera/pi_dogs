@@ -25,8 +25,9 @@ line-height: normal;
   grid-template-columns: 1fr 1fr 1fr; 
   grid-template-rows: 1fr 1fr 1fr; 
   gap: 10px;
-
+  
 }
+
 
 .card {
   display: flex;
@@ -38,6 +39,10 @@ line-height: normal;
   border-radius: 25px;
   background: #7d3467;
   text-decoration: none;
+  transition: 0.3s, color 0.3s, transform 0.3s;
+}
+.card:hover {
+  transform: scale(1.03);
 }
 
 .card h3 {
@@ -90,7 +95,15 @@ line-height: normal;
   font-size: 1.2rem;
   color: white;
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
   
+}
+
+.controlButtons:hover {
+    background-color: white;
+    color: #9CFFCE;
+    transform: scale(1.15);
+    
 }
 
 .controlContainer h3 {

@@ -20,26 +20,34 @@ export const NavBarComp = () => {
 
 
   return (
-    <nav className={ styles.navBar }>
-      <section className={ styles.navBrand }>
+    <nav className={styles.navBar}>
+      <section className={styles.navBrand}>
         <img src="assets/dog_logo.png" alt="dog_logo" />
         <h2>Dogctyonary</h2>
       </section>
-      <section className={ styles.navItems }>
-        <NavLink to='/home' className={ styles.navLink }>Home</NavLink>
-        <button onClick={ onFormModal } className={ styles.formButton }>New breeds</button>
-        {
-          modal ? 
-          <FormModalComp /> :
-          ''
-        }
-        {
-          successModal ? 
-          <DogAddedComp /> :
-          ''
-        }
-        <NavLink to='/about' className={ styles.navLink }>About Me</NavLink>
+      <section className={styles.navItems}>
+        <NavLink
+          to="/home"
+          className={({ isActive }) =>
+            isActive ? `${styles.navLinkActive}` : `${styles.navLink}`
+          }
+        >
+          Home
+        </NavLink>
+        <button onClick={onFormModal} className={styles.formButton}>
+          New breeds
+        </button>
+        {modal ? <FormModalComp /> : ""}
+        {successModal ? <DogAddedComp /> : ""}
+        <NavLink
+          to="/about"
+          className={({ isActive }) =>
+            isActive ? `${styles.navLinkActive}` : `${styles.navLink}`
+          }
+        >
+          About Me
+        </NavLink>
       </section>
     </nav>
-  )
+  );
 }
