@@ -32,12 +32,4 @@ export const Dogs = sequelize.define("dogs", {
 Dogs.belongsToMany(Temperaments, { through: "DogTemperament" });
 Temperaments.belongsToMany(Dogs, { through: "DogTemperament" });
 
-// Dogs.hasMany(Temperaments, {
-//   foreignKey: "dogId",
-//   sourceKey: "id",
-// });
 
-// Temperaments.belongsTo(Dogs, {
-//   foreignKey: "dogId",
-//   targetKey: "id",
-// });

@@ -2,3 +2,10 @@ body {
   font-family: 'Lilita One', sans-serif;
   background-color: #DC9AFE;
 }
+
+@media (max-width: 768px) {
+  body {
+    width: calc( 100vw - 16px );
+    
+  }
+}

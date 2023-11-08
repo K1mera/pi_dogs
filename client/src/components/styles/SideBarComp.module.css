@@ -159,3 +159,17 @@
     transform: scale(1.15);
     
 }
+
+@media (max-width: 768px) {
+  .sideBar {
+    width: auto;
+    
+  }
+  .searchButton {
+    margin-bottom: 15px;
+  }
+  .filterSection {
+    height: 150px;
+  }
+  
+}

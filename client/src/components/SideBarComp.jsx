@@ -33,9 +33,10 @@ export const SideBarComp = () => {
     };
   }, [selectedTemperaments, dispatch]);
 
-// console.log(selectedTemperaments);
+// // console.log(selectedTemperaments);
 
   const handleTempCheckboxChange = (tempName) => {
+    console.log(tempName);
     if (selectedTemperaments.includes(tempName)) {
       setSelectedTemperaments(
         selectedTemperaments.filter((temp) => temp !== tempName)
@@ -59,7 +60,6 @@ export const SideBarComp = () => {
 
   const onDescendingClick = (dogs) => {
     dispatch(orderDescendingDogs(dogs)); 
-    
   };
 
 

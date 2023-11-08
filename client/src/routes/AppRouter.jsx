@@ -8,7 +8,7 @@ export const AppRouter = () => {
  
 
   return (
-    <div
+    <
     //   className={
     //     location.pathname === "/home" ? styles.layoutHome : styles.layoutAbout
     //   }
@@ -29,6 +29,6 @@ export const AppRouter = () => {
           <Route path="/*" element={<Navigate to="/home" />} />
         </Routes>
       </div>
-    </div>
+    </>
   );
 };

@@ -80,13 +80,14 @@ export const filteringDogs = (selectedTemperaments, dogs) => {
   
 
     const dogsMatching = dogs.filter((dog) =>
-      selectedTemperaments.some((selectedTemp) =>
+      selectedTemperaments.every((selectedTemp) =>
         dog.temperaments.some((tempObj) => tempObj.name === selectedTemp)
       )
     );
     
     
     dispatch(setDogs(dogsMatching));
+    dispatch(setCurrentPage(1))
   };
 };
 
