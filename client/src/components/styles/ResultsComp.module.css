@@ -10,24 +10,21 @@
 
 .mainContainer h2 {
   margin: 0%;
-  color: #9CFFCE;
-font-size: 36px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+  color: #9cffce;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
-
 
 .cardContainer {
   width: 100%;
   height: 100%;
-  display: grid; 
-  grid-template-columns: 1fr 1fr 1fr; 
-  grid-template-rows: 1fr 1fr 1fr; 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   gap: 10px;
-  
 }
-
 
 .card {
   display: flex;
@@ -35,7 +32,7 @@ line-height: normal;
   height: auto;
   padding: 10px;
   align-items: flex-start;
-  gap: 10px;
+  gap: 20px;
   border-radius: 25px;
   background: #7d3467;
   text-decoration: none;
@@ -46,12 +43,13 @@ line-height: normal;
 }
 
 .card h3 {
-    color: white;
-    font-weight: 300;
+  color: white;
+  font-weight: 300;
+  font-size: 18px;
 }
 
 .imageContainer {
-  height: 168px;
+  height: 160px;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -91,19 +89,17 @@ line-height: normal;
   border: 1px solid #fff;
   background: #9cffce;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  font-family: 'Lilita One', sans-serif;
+  font-family: "Lilita One", sans-serif;
   font-size: 1.2rem;
   color: white;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s, transform 0.3s;
-  
 }
 
 .controlButtons:hover {
-    background-color: white;
-    color: #9CFFCE;
-    transform: scale(1.15);
-    
+  background-color: white;
+  color: #9cffce;
+  transform: scale(1.15);
 }
 
 .controlContainer h3 {
@@ -116,18 +112,17 @@ line-height: normal;
 .cardTextContainer {
   display: flex;
   flex-direction: column;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: flex-start;
-  gap: 15px;
+  gap: 7px;
 }
 
 .cardTextContainer * {
   margin: 0%;
-  
 }
 
 .tempsTitle {
-  color: #9CFFCE;
+  color: #9cffce;
   opacity: 90%;
   font-weight: 300;
   margin-bottom: 7px;
@@ -135,7 +130,7 @@ line-height: normal;
 
 .tempsItems {
   list-style-type: disc;
-  padding-left: 20px
+  padding-left: 20px;
 }
 
 .tempsItems li {
@@ -143,21 +138,19 @@ line-height: normal;
 }
 
 .weightData {
-  color: #9CFFCE;
+  color: #9cffce;
   opacity: 90%;
   font-weight: 300;
 }
 
 .weightData span {
   color: white;
-  font-family: 'Lato';
+  font-family: "Lato";
   font-size: 1rem;
 }
 
-
-
 .tempsItems li::marker {
-  color: #9CFFCE;
+  color: #9cffce;
 }
 
 @media (max-width: 768px) {
@@ -166,7 +159,6 @@ line-height: normal;
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
-    
   }
 
   .mainContainer h2 {
@@ -175,7 +167,6 @@ line-height: normal;
 
   .cardContainer {
     grid-template-columns: 1fr;
-    
   }
 
   .card {

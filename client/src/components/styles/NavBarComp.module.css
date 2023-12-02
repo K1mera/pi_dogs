@@ -5,6 +5,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+    
 }
 
 .navBrand {
@@ -51,6 +52,10 @@
     cursor: pointer;
 }
 
+.responsiveMenu {
+    display: none;
+}
+
 
 @media (max-width: 768px) {
     .navItems {
@@ -63,5 +68,9 @@
 
     .navBrand {
         gap: 0;
+    }
+
+    .responsiveMenu {
+        display: flex;
     }
 }

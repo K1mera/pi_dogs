@@ -1,3 +1,85 @@
 .mainAbout {
- 
+  display: flex;
+  width: auto;
+  height: calc(100vh - 151px);
+  padding: 10px 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+}
+
+.leftCont {
+  height: 488px;
+  width: 330px;
+  background-image: url(/assets/left_shape.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 60px;
+  position: absolute;
+  left: 294px;
+}
+
+.centerCont {
+  margin-top: 40px;
+}
+
+.rightCont {
+  height: 488px;
+  width: 330px;
+  background-image: url(/assets/right_shape.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 60px;
+  position: absolute;
+  right: 200px;
+}
+
+.leftPar {
+  height: 100%;
+  padding-right: 120px;
+  /* padding-top: 10px; */
+  color: #fff;
+  font-family: Lilita One;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.rightPar {
+  color: #2D2D2D;
+  height: 100%;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-right: 80px;
+  font-family: Lilita One;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.iconSection {
+  position: fixed;
+  left: 20px;
+  bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  gap: 5px;
+}
+
+.iconLinks {
+  background-color: transparent;
+  border: none;
+}
+
+.gitButton {
+  fill: white;
+  padding: 3px;
+}
+
+.linkedinButton {
+  fill: #0077B5;
 }

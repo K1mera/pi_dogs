@@ -5,6 +5,7 @@ import { FormModalComp } from './FormModalComp'
 import styles from './styles/NavBarComp.module.css'
 import {openFormModal} from '../store'
 import {DogAddedComp} from './DogAddedComp'
+import {MenuIcon} from '../svg/menuIcon'
 
 export const NavBarComp = () => {
 
@@ -24,6 +25,9 @@ export const NavBarComp = () => {
       <section className={styles.navBrand}>
         <img src="assets/dog_logo.png" alt="dog_logo" />
         <h2>Dogctyonary</h2>
+      </section>
+      <section className={ styles.responsiveMenu }>
+        <MenuIcon className={ styles.icon } />
       </section>
       <section className={styles.navItems}>
         <NavLink
