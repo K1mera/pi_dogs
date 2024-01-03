@@ -7,7 +7,7 @@ const server = express();
 server.use(express.json());
 server.use(
   cors({
-    origin: ["https://dogs-api-isdv.onrender.com"],
+    origin: ["https://dogs-api-isdv.onrender.com", "http://localhost:5173"],
     methods: ["GET", "POST"],
   })
 );
