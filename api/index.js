@@ -3,7 +3,7 @@ import { sequelize } from "./src/db.js"
 import { importDataFromAPI } from "./src/controllers/dogs.controller.js";
 
 
-const PORT = 3001
+const PORT = process.env.PORT || 3001;
 
 
 sequelize
