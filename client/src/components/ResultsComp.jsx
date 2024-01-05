@@ -11,7 +11,7 @@ export const ResultsComp = () => {
 
   const startIndex = (currentPage - 1) * 8;
 
-  // console.log(dogs);
+  
 
   const handlePreviousPage = () => {
     if (currentPage > 1) {
@@ -26,7 +26,7 @@ export const ResultsComp = () => {
   };
 
   
-  // console.log(dogs);
+  
   return (
     <main className={styles.mainContainer}>
       <h2>Breeds</h2>

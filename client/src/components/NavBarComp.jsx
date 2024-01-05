@@ -7,6 +7,8 @@ import {openFormModal} from '../store'
 import {DogAddedComp} from './DogAddedComp'
 import {MenuIcon} from '../svg/menuIcon'
 
+import dogImage from "/assets/dog_logo.png";
+
 export const NavBarComp = () => {
 
   const dispatch = useDispatch()
@@ -23,7 +25,7 @@ export const NavBarComp = () => {
   return (
     <nav className={styles.navBar}>
       <section className={styles.navBrand}>
-        <img src="assets/dog_logo.png" alt="dog_logo" />
+        <img src={ dogImage } alt="dog_logo" />
         <h2>Dogctyonary</h2>
       </section>
       <section className={ styles.responsiveMenu }>

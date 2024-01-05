@@ -9,7 +9,7 @@ export const SideBarComp = () => {
   const dispatch = useDispatch()
 
   const { dogs } = useSelector( state => state.dogs )
-// console.log(dogs);
+
   const { temps } = useSelector( state => state.temps )
   useEffect(() => {
     dispatch(getTemps())
@@ -33,10 +33,10 @@ export const SideBarComp = () => {
     };
   }, [selectedTemperaments, dispatch]);
 
-// // console.log(selectedTemperaments);
+
 
   const handleTempCheckboxChange = (tempName) => {
-    console.log(tempName);
+    // console.log(tempName);
     if (selectedTemperaments.includes(tempName)) {
       setSelectedTemperaments(
         selectedTemperaments.filter((temp) => temp !== tempName)
@@ -46,7 +46,7 @@ export const SideBarComp = () => {
     }
   };
 
-  // console.log(selectedTemperaments);
+  
 
   const onSubmit = (event) => {
     event.preventDefault()

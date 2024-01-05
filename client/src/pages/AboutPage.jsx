@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import styles from "./styles/AboutPage.module.css";
 import {GitIcon, LinkedinIcon} from "../svg";
 
+import myPic from "/assets/me_photo.png";
+
 export const AboutPage = () => {
   useEffect(() => {
     document.documentElement.style.backgroundColor = "#0F0115";
@@ -23,7 +25,7 @@ export const AboutPage = () => {
         </p>
       </section>
       <section className={styles.centerCont}>
-        <img src="/assets/me_photo.png" alt="" />
+        <img src={ myPic } alt="" />
       </section>
       <section className={styles.rightCont}>
         <p className={styles.rightPar}>
