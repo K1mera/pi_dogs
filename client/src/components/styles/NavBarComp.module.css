@@ -52,6 +52,15 @@
     cursor: pointer;
 }
 
+.formButtonActive {
+    color: #9cffce;
+    background: none;
+    border: none;
+    font-family: Lilita One;
+    font-size: 24px;
+    cursor: pointer;
+}
+
 .responsiveMenu {
     display: none;
 }

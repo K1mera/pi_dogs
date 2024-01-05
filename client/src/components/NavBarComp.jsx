@@ -25,11 +25,11 @@ export const NavBarComp = () => {
   return (
     <nav className={styles.navBar}>
       <section className={styles.navBrand}>
-        <img src={ dogImage } alt="dog_logo" />
+        <img src={dogImage} alt="dog_logo" />
         <h2>Dogctyonary</h2>
       </section>
-      <section className={ styles.responsiveMenu }>
-        <MenuIcon className={ styles.icon } />
+      <section className={styles.responsiveMenu}>
+        <MenuIcon className={styles.icon} />
       </section>
       <section className={styles.navItems}>
         <NavLink
@@ -40,7 +40,7 @@ export const NavBarComp = () => {
         >
           Home
         </NavLink>
-        <button onClick={onFormModal} className={styles.formButton}>
+        <button onClick={onFormModal} className={ !modal ? `${styles.formButton}` : `${styles.formButtonActive}` }>
           New breeds
         </button>
         {modal ? <FormModalComp /> : ""}
